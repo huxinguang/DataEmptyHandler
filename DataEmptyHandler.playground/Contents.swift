@@ -40,7 +40,10 @@ extension DataEmptyHandler{
     func showEmptyView() {
         let ev = emptyView()
         ev.tag = 9527
-        // If you want to use Auto Layout to dynamically calculate the size and position of your view, you must set this property to false, and then provide a non ambiguous, nonconflicting set of constraints for the view.
+        /*
+         If you want to use Auto Layout to dynamically calculate the size and position of your view, you must set this property to false, and then provide a non ambiguous, nonconflicting set of constraints for the view.
+         By default, the property is set to true for any view you programmatically create. If you add views in Interface Builder, the system automatically sets this property to false.
+         */
         ev.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(ev)
         let centerX = NSLayoutConstraint(item: ev, attribute: .centerX, relatedBy: .equal, toItem: containerView, attribute: .centerX, multiplier: 1.0, constant: 0)
